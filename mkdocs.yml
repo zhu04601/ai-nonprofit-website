@@ -1,0 +1,165 @@
+site_name: AI Integration for Non-Profits
+site_description: A Comprehensive Guide for Mission-Driven Organizations - Developed for Asian Media Access
+site_author: Asian Media Access Team
+site_url: https://yourdomain.github.io/ai-nonprofit-textbook/
+
+# Repository
+repo_name: AI-NonProfit-Textbook
+repo_url: https://github.com/yourusername/ai-nonprofit-textbook
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2026 Asian Media Access | All rights reserved
+
+# Theme Configuration
+theme:
+  name: material
+  logo: img/logo.png
+  favicon: img/favicon.png
+  
+  # Color scheme - matching your brand colors
+  palette:
+    # Light mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode  
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  # Features
+  features:
+    - announce.dismiss
+    - content.code.copy
+    - content.tooltips
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  
+  icon:
+    repo: fontawesome/brands/github
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: Permanent link
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra CSS and JavaScript
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/extra.js
+
+# Extra configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername
+      name: GitHub
+    - icon: fontawesome/solid/globe
+      link: https://ww1.amamedia.org/
+      name: Asian Media Access
+  
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline  
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback!
+
+# Navigation
+nav:
+  - Home: index.md
+  - About: about.md
+  - Course Description: course-description.md
+  
+  - Chapters:
+    - chapters/index.md
+    - Chapter 1 - Introduction: chapters/01-introduction.md
+    - Chapter 2 - AI Fundamentals: chapters/02-ai-fundamentals.md
+    - Chapter 3 - Generative AI: chapters/03-generative-ai.md
+    - Chapter 4 - Ethics & Bias: chapters/04-ethics-bias.md
+    - Chapter 5 - Data Privacy: chapters/05-data-privacy.md
+    - Chapter 6 - Fundraising: chapters/06-fundraising.md
+    - Chapter 7 - Program Delivery: chapters/07-program-delivery.md
+    - Chapter 8 - Operations: chapters/08-operations.md
+    - Chapter 9 - Content Creation: chapters/09-content-creation.md
+    - Chapter 10 - Volunteer Management: chapters/10-volunteer-management.md
+    - Chapter 11 - Tool Selection: chapters/11-tool-selection.md
+    - Chapter 12 - Measuring Impact: chapters/12-measuring-impact.md
+    - Chapter 13 - AI Strategy: chapters/13-ai-strategy.md
+    - Chapter 14 - Change Management: chapters/14-change-management.md
+    - Chapter 15 - Governance: chapters/15-governance-future.md
+  
+  - MicroSims:
+    - microsims/index.md
+    - Prompt Engineering: microsims/prompt-engineering.md
+    - Donor Segmentation: microsims/donor-segmentation.md
+    - Ethics Decision Tree: microsims/ethics-decision-tree.md
+  
+  - Learning Graph: learning-graph.md
+  - Concept Taxonomy: concept-taxonomy.md
+  - Glossary: glossary.md
+  - FAQ: faq.md
+  - Resources: resources.md
+  - License: license.md
+  - Contact: contact.md

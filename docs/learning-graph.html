@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI for Non-Profits: Learning Graph</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        #graph {
+            width: 100%;
+            height: 800px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        select, button {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        select {
+            background: white;
+        }
+        
+        .node {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .node:hover {
+            transform: scale(1.1);
+        }
+        
+        .node circle {
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+        
+        .node text {
+            font-size: 11px;
+            font-weight: 600;
+            pointer-events: none;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .link {
+            fill: none;
+            stroke: #999;
+            stroke-opacity: 0.4;
+            stroke-width: 1.5px;
+            marker-end: url(#arrowhead);
+        }
+        
+        .link.highlighted {
+            stroke: #667eea;
+            stroke-opacity: 0.8;
+            stroke-width: 3px;
+        }
+        
+        .tooltip {
+            position: absolute;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            border-radius: 6px;
+            pointer-events: none;
+            font-size: 13px;
+            max-width: 300px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        
+        .legend {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 AI for Non-Profits: Interactive Learning Graph</h1>
+        <p class="subtitle">Explore the 200 concepts and their dependencies • Click nodes to see details</p>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="domainFilter"><strong>Filter by Domain:</strong></label>
+                <select id="domainFilter">
+                    <option value="all">All Domains</option>
+                    <option value="foundation">AI Fundamentals</option>
+                    <option value="genai">Generative AI & LLMs</option>
+                    <option value="ethics">Ethics & Bias</option>
+                    <option value="privacy">Privacy & Security</option>
+                    <option value="nonprofit">Non-Profit Basics</option>
+                    <option value="fundraising">Fundraising</option>
+                    <option value="program">Program Delivery</option>
+                    <option value="operations">Operations</option>
+                    <option value="content">Content Creation</option>
+                    <option value="strategy">Strategy</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="bloomFilter"><strong>Bloom's Level:</strong></label>
+                <select id="bloomFilter">
+                    <option value="all">All Levels</option>
+                    <option value="1">Level 1 (Remember)</option>
+                    <option value="2">Level 2 (Understand)</option>
+                    <option value="3">Level 3 (Apply)</option>
+                    <option value="4">Level 4 (Analyze)</option>
+                    <option value="5">Level 5 (Evaluate)</option>
+                    <option value="6">Level 6 (Create)</option>
+                </select>
+            </div>
+            
+            <button onclick="resetView()">🔄 Reset View</button>
+            <button onclick="exportData()">💾 Export Data</button>
+        </div>
+        
+        <div id="graph"></div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #4ade80;"></div>
+                <span>Level 1-2 (Remember/Understand)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #60a5fa;"></div>
+                <span>Level 3 (Apply)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #a78bfa;"></div>
+                <span>Level 4 (Analyze)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-circle" style="background: #f472b6;"></div>
+                <span>Level 5-6 (Evaluate/Create)</span>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalConcepts">200</div>
+                <div class="stat-label">Total Concepts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="visibleConcepts">200</div>
+                <div class="stat-label">Visible Concepts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalConnections">400+</div>
+                <div class="stat-label">Dependencies</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="avgDepth">3.2</div>
+                <div class="stat-label">Avg Learning Depth</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data structure (in production, load from JSON file)
+        const graphData = {
+            nodes: [
+                // Tier 1 Foundation
+                {id: 1, name: "AI", domain: "foundation", bloom: 1, tier: 1, desc: "Artificial Intelligence - computer systems performing intelligent tasks"},
+                {id: 2, name: "ML", domain: "foundation", bloom: 1, tier: 2, desc: "Machine Learning - systems learning from data"},
+                {id: 7, name: "Algorithm", domain: "foundation", bloom: 1, tier: 1, desc: "Step-by-step problem solving procedure"},
+                {id: 31, name: "Generative AI", domain: "genai", bloom: 2, tier: 2, desc: "AI creating new content"},
+                {id: 32, name: "LLM", domain: "genai", bloom: 2, tier: 3, desc: "Large Language Model"},
+                {id: 51, name: "AI Ethics", domain: "ethics", bloom: 2, tier: 2, desc: "Moral principles for AI"},
+                {id: 52, name: "Algorithmic Bias", domain: "ethics", bloom: 2, tier: 3, desc: "Systematic errors creating unfair outcomes"},
+                {id: 71, name: "Data Privacy", domain: "privacy", bloom: 2, tier: 2, desc: "Protection of personal information"},
+                {id: 91, name: "501(c)(3)", domain: "nonprofit", bloom: 1, tier: 1, desc: "Tax-exempt non-profit status"},
+                {id: 92, name: "Mission", domain: "nonprofit", bloom: 2, tier: 1, desc: "Organization's core purpose"},
+                {id: 111, name: "DMS", domain: "fundraising", bloom: 3, tier: 4, desc: "Donor Management System"},
+                {id: 112, name: "CRM", domain: "fundraising", bloom: 3, tier: 4, desc: "Constituent Relationship Management"},
+                {id: 113, name: "Predictive Giving", domain: "fundraising", bloom: 4, tier: 5, desc: "Forecasting donor contributions"},
+                {id: 126, name: "Chatbot", domain: "program", bloom: 3, tier: 4, desc: "AI conversational assistant"},
+                {id: 133, name: "Translation", domain: "program", bloom: 3, tier: 4, desc: "Multilingual AI translation"},
+                {id: 146, name: "Workflow Auto", domain: "operations", bloom: 3, tier: 4, desc: "Automating repetitive tasks"},
+                {id: 166, name: "Content Gen", domain: "content", bloom: 3, tier: 4, desc: "AI creating content"},
+                {id: 181, name: "Digital Transform", domain: "strategy", bloom: 5, tier: 6, desc: "Comprehensive tech integration"},
+                {id: 200, name: "Governance", domain: "strategy", bloom: 6, tier: 6, desc: "AI governance framework"},
+                // Add more sample nodes...
+            ],
+            links: [
+                {source: 1, target: 2},  // AI → ML
+                {source: 2, target: 31}, // ML → Generative AI
+                {source: 31, target: 32}, // Gen AI → LLM
+                {source: 1, target: 51}, // AI → Ethics
+                {source: 51, target: 52}, // Ethics → Bias
+                {source: 1, target: 71}, // AI → Privacy
+                {source: 91, target: 92}, // 501c3 → Mission
+                {source: 92, target: 111}, // Mission → DMS
+                {source: 111, target: 112}, // DMS → CRM
+                {source: 112, target: 113}, // CRM → Predictive
+                {source: 32, target: 126}, // LLM → Chatbot
+                {source: 32, target: 133}, // LLM → Translation
+                {source: 1, target: 146}, // AI → Workflow
+                {source: 31, target: 166}, // Gen AI → Content
+                {source: 51, target: 181}, // Ethics → Transform
+                {source: 181, target: 200}, // Transform → Governance
+                // Add more sample links...
+            ]
+        };
+        
+        // Color scheme based on Bloom's level
+        function getNodeColor(bloom) {
+            const colors = {
+                1: "#4ade80", 2: "#4ade80",
+                3: "#60a5fa",
+                4: "#a78bfa",
+                5: "#f472b6", 6: "#f472b6"
+            };
+            return colors[bloom] || "#94a3b8";
+        }
+        
+        // Initialize visualization
+        const width = document.getElementById('graph').clientWidth;
+        const height = 800;
+        
+        const svg = d3.select("#graph")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        
+        // Add arrow marker
+        svg.append("defs").append("marker")
+            .attr("id", "arrowhead")
+            .attr("viewBox", "0 0 10 10")
+            .attr("refX", 20)
+            .attr("refY", 5)
+            .attr("markerWidth", 6)
+            .attr("markerHeight", 6)
+            .attr("orient", "auto")
+            .append("path")
+            .attr("d", "M 0 0 L 10 5 L 0 10 z")
+            .attr("fill", "#999");
+        
+        // Create force simulation
+        const simulation = d3.forceSimulation(graphData.nodes)
+            .force("link", d3.forceLink(graphData.links).id(d => d.id).distance(100))
+            .force("charge", d3.forceManyBody().strength(-300))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("collision", d3.forceCollide().radius(30));
+        
+        // Create links
+        const link = svg.append("g")
+            .selectAll("path")
+            .data(graphData.links)
+            .join("path")
+            .attr("class", "link");
+        
+        // Create nodes
+        const node = svg.append("g")
+            .selectAll("g")
+            .data(graphData.nodes)
+            .join("g")
+            .attr("class", "node")
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended));
+        
+        node.append("circle")
+            .attr("r", d => 10 + d.bloom * 2)
+            .attr("fill", d => getNodeColor(d.bloom));
+        
+        node.append("text")
+            .attr("dy", 25)
+            .attr("text-anchor", "middle")
+            .text(d => d.name)
+            .style("fill", "#333");
+        
+        // Tooltip
+        const tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+        
+        node.on("mouseover", function(event, d) {
+            tooltip.transition().duration(200).style("opacity", 1);
+            tooltip.html(`
+                <strong>${d.name}</strong><br/>
+                ID: ${d.id}<br/>
+                Domain: ${d.domain}<br/>
+                Bloom's Level: ${d.bloom}<br/>
+                Tier: ${d.tier}<br/>
+                <em>${d.desc}</em>
+            `)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 28) + "px");
+            
+            // Highlight connected links
+            link.classed("highlighted", l => l.source.id === d.id || l.target.id === d.id);
+        })
+        .on("mouseout", function() {
+            tooltip.transition().duration(500).style("opacity", 0);
+            link.classed("highlighted", false);
+        });
+        
+        // Update positions
+        simulation.on("tick", () => {
+            link.attr("d", d => {
+                const dx = d.target.x - d.source.x;
+                const dy = d.target.y - d.source.y;
+                const dr = Math.sqrt(dx * dx + dy * dy);
+                return `M${d.source.x},${d.source.y}A${dr},${dr} 0 0,1 ${d.target.x},${d.target.y}`;
+            });
+            
+            node.attr("transform", d => `translate(${d.x},${d.y})`);
+        });
+        
+        // Drag functions
+        function dragstarted(event, d) {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+        }
+        
+        function dragged(event, d) {
+            d.fx = event.x;
+            d.fy = event.y;
+        }
+        
+        function dragended(event, d) {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+        }
+        
+        // Filter functions
+        document.getElementById('domainFilter').addEventListener('change', function() {
+            const domain = this.value;
+            node.style("opacity", d => domain === "all" || d.domain === domain ? 1 : 0.1);
+            link.style("opacity", l => {
+                if (domain === "all") return 0.4;
+                return (l.source.domain === domain && l.target.domain === domain) ? 0.4 : 0.05;
+            });
+            updateStats();
+        });
+        
+        document.getElementById('bloomFilter').addEventListener('change', function() {
+            const level = parseInt(this.value);
+            node.style("opacity", d => isNaN(level) || d.bloom === level ? 1 : 0.1);
+            updateStats();
+        });
+        
+        function resetView() {
+            document.getElementById('domainFilter').value = 'all';
+            document.getElementById('bloomFilter').value = 'all';
+            node.style("opacity", 1);
+            link.style("opacity", 0.4);
+            simulation.alpha(1).restart();
+            updateStats();
+        }
+        
+        function updateStats() {
+            const visible = graphData.nodes.filter(n => {
+                const style = window.getComputedStyle(document.querySelector(`circle`));
+                return parseFloat(style.opacity) > 0.5;
+            }).length;
+            document.getElementById('visibleConcepts').textContent = visible;
+        }
+        
+        function exportData() {
+            const dataStr = JSON.stringify(graphData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: "application/json"});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'learning-graph-data.json';
+            link.click();
+        }
+        
+        console.log("Learning Graph initialized with", graphData.nodes.length, "concepts");
+    </script>
+</body>
+</html>
