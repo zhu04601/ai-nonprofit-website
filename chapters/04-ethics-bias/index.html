@@ -1,0 +1,3175 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Comprehensive Guide for Mission-Driven Organizations - Developed for Asian Media Access">
+      
+      
+        <meta name="author" content="Asian Media Access Team">
+      
+      
+        <link rel="canonical" href="https://yourdomain.github.io/ai-nonprofit-textbook/chapters/04-ethics-bias/">
+      
+      
+        <link rel="prev" href="../03-generative-ai/">
+      
+      
+        <link rel="next" href="../05-data-privacy/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Chapter 4 - Ethics & Bias - AI Integration for Non-Profits</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-ethics-bias-and-responsible-ai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI Integration for Non-Profits" class="md-header__button md-logo" aria-label="AI Integration for Non-Profits" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI Integration for Non-Profits
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 4 - Ethics & Bias
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yourusername/ai-nonprofit-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AI-NonProfit-Textbook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../course-description/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Description
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../index.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Chapters
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../microsims/index.md" class="md-tabs__link">
+          
+  
+  
+    
+  
+  MicroSims
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../learning-graph/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Learning Graph
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../concept-taxonomy/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Concept Taxonomy
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../license/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  License
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contact/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI Integration for Non-Profits" class="md-nav__button md-logo" aria-label="AI Integration for Non-Profits" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    AI Integration for Non-Profits
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yourusername/ai-nonprofit-textbook" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AI-NonProfit-Textbook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 - Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-ai-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 - AI Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-generative-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 - Generative AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 - Ethics & Bias
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 - Ethics & Bias
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-why-ethics-matter-more-for-non-profits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Why Ethics Matter More for Non-Profits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Why Ethics Matter More for Non-Profits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-stakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Stakes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-core-ethical-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Core Ethical Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Core Ethical Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-beneficence-do-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Beneficence (Do Good)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-non-maleficence-do-no-harm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Non-Maleficence (Do No Harm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-justice-fairness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Justice (Fairness)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-autonomy-respect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Autonomy (Respect)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Transparency
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-understanding-algorithmic-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Understanding Algorithmic Bias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Understanding Algorithmic Bias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Bias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-real-world-examples-of-ai-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Real-World Examples of AI Bias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Real-World Examples of AI Bias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-recidivism-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 1: Recidivism Prediction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-facial-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 2: Facial Recognition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-job-screening-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3: Job Screening AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-this-applies-to-non-profits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How This Applies to Non-Profits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-detecting-bias-in-your-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Detecting Bias in Your AI Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Detecting Bias in Your AI Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantitative-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantitative Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualitative-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qualitative Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-mitigating-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Mitigating Bias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6 Mitigating Bias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-processing-fix-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Processing (Fix the Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-processing-fix-the-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Processing (Fix the Algorithm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-processing-fix-the-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-Processing (Fix the Outputs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizational-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organizational Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-the-digital-divide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 The Digital Divide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 The Digital Divide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-of-digital-divide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensions of Digital Divide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ensuring-equity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ensuring Equity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-informed-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Informed Consent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Informed Consent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-communicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Communicate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-consent-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Consent Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-building-an-ethics-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Building an Ethics Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9 Building an Ethics Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-define-your-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Define Your Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-establish-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Establish Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-decision-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Create Decision Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-assign-responsibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Assign Responsibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-regular-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Regular Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-practical-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Practical Guidelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.10 Practical Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DO:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DON'T:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-data-privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 - Data Privacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-fundraising/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 - Fundraising
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-program-delivery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 - Program Delivery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8 - Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-content-creation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 - Content Creation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-volunteer-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 - Volunteer Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-tool-selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 - Tool Selection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-measuring-impact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 12 - Measuring Impact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-ai-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 13 - AI Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-change-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 14 - Change Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-governance-future/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 15 - Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MicroSims
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MicroSims
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../microsims/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../microsims/prompt-engineering.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../microsims/donor-segmentation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Donor Segmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../microsims/ethics-decision-tree.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ethics Decision Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning-graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Graph
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concept-taxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concept Taxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-why-ethics-matter-more-for-non-profits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Why Ethics Matter More for Non-Profits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Why Ethics Matter More for Non-Profits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-stakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Stakes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-core-ethical-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Core Ethical Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Core Ethical Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-beneficence-do-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Beneficence (Do Good)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-non-maleficence-do-no-harm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Non-Maleficence (Do No Harm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-justice-fairness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Justice (Fairness)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-autonomy-respect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Autonomy (Respect)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Transparency
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-understanding-algorithmic-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Understanding Algorithmic Bias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Understanding Algorithmic Bias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Bias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-real-world-examples-of-ai-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Real-World Examples of AI Bias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Real-World Examples of AI Bias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-recidivism-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 1: Recidivism Prediction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-facial-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 2: Facial Recognition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-job-screening-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Case 3: Job Screening AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-this-applies-to-non-profits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How This Applies to Non-Profits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-detecting-bias-in-your-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Detecting Bias in Your AI Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Detecting Bias in Your AI Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quantitative-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantitative Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qualitative-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qualitative Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-mitigating-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Mitigating Bias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6 Mitigating Bias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-processing-fix-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Processing (Fix the Data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-processing-fix-the-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In-Processing (Fix the Algorithm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-processing-fix-the-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-Processing (Fix the Outputs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organizational-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organizational Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-the-digital-divide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 The Digital Divide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 The Digital Divide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-of-digital-divide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dimensions of Digital Divide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ensuring-equity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ensuring Equity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-informed-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Informed Consent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Informed Consent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-communicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Communicate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-consent-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Consent Language
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-building-an-ethics-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Building an Ethics Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9 Building an Ethics Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-define-your-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Define Your Values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-establish-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Establish Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-decision-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Create Decision Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-assign-responsibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Assign Responsibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-regular-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Regular Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-practical-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Practical Guidelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.10 Practical Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DO:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DON'T:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../index.md" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-4-ethics-bias-and-responsible-ai">Chapter 4: Ethics, Bias, and Responsible AI<a class="headerlink" href="#chapter-4-ethics-bias-and-responsible-ai" title="Permanent link">&para;</a></h1>
+<p>Building trust through ethical AI implementation.</p>
+<hr />
+<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Understand</strong> ethical principles for AI in mission-driven organizations</li>
+<li><strong>Identify</strong> different types of bias in AI systems</li>
+<li><strong>Evaluate</strong> AI implementations for fairness and equity</li>
+<li><strong>Apply</strong> responsible AI practices to your organization</li>
+<li><strong>Create</strong> ethical guidelines for AI use</li>
+</ul>
+<p><strong>Bloom's Level:</strong> 4-5 (Analyze, Evaluate) | <strong>Time:</strong> 4-5 hours</p>
+<hr />
+<h2 id="41-why-ethics-matter-more-for-non-profits">4.1 Why Ethics Matter More for Non-Profits<a class="headerlink" href="#41-why-ethics-matter-more-for-non-profits" title="Permanent link">&para;</a></h2>
+<p>Non-profits operate on <strong>trust</strong>. Your community trusts you to:
+- Serve their best interests
+- Protect their privacy
+- Treat everyone fairly
+- Be transparent about your methods</p>
+<p><strong>AI can erode that trust quickly if implemented carelessly.</strong></p>
+<h3 id="the-stakes">The Stakes<a class="headerlink" href="#the-stakes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>For-Profit AI Failure</th>
+<th>Non-Profit AI Failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bad PR, potential lawsuits</td>
+<td>Loss of community trust</td>
+</tr>
+<tr>
+<td>Stock price drops</td>
+<td>Donors leave</td>
+</tr>
+<tr>
+<td>Fix and move on</td>
+<td>Beneficiaries harmed</td>
+</tr>
+<tr>
+<td>Financial impact</td>
+<td>Mission impact</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Remember</p>
+<p><strong>One biased AI decision can undo years of community trust-building.</strong></p>
+</div>
+<hr />
+<h2 id="42-core-ethical-principles">4.2 Core Ethical Principles<a class="headerlink" href="#42-core-ethical-principles" title="Permanent link">&para;</a></h2>
+<h3 id="1-beneficence-do-good">1. Beneficence (Do Good)<a class="headerlink" href="#1-beneficence-do-good" title="Permanent link">&para;</a></h3>
+<p>AI should actively benefit your community and further your mission.</p>
+<p><strong>Questions to ask:</strong>
+- Does this AI genuinely help our beneficiaries?
+- Are we using AI because it's trendy or because it serves our mission?
+- Could these resources be better spent elsewhere?</p>
+<h3 id="2-non-maleficence-do-no-harm">2. Non-Maleficence (Do No Harm)<a class="headerlink" href="#2-non-maleficence-do-no-harm" title="Permanent link">&para;</a></h3>
+<p>AI should not harm individuals or communities, even unintentionally.</p>
+<p><strong>Questions to ask:</strong>
+- Could this AI disadvantage any group?
+- What happens if the AI makes a mistake?
+- Are there unintended consequences?</p>
+<h3 id="3-justice-fairness">3. Justice (Fairness)<a class="headerlink" href="#3-justice-fairness" title="Permanent link">&para;</a></h3>
+<p>AI benefits and burdens should be distributed fairly.</p>
+<p><strong>Questions to ask:</strong>
+- Who benefits from this AI?
+- Who bears the costs or risks?
+- Are we addressing existing inequities or perpetuating them?</p>
+<h3 id="4-autonomy-respect">4. Autonomy (Respect)<a class="headerlink" href="#4-autonomy-respect" title="Permanent link">&para;</a></h3>
+<p>People should maintain control and decision-making power.</p>
+<p><strong>Questions to ask:</strong>
+- Can people opt out of AI systems?
+- Do they understand how AI affects them?
+- Have we obtained informed consent?</p>
+<h3 id="5-transparency">5. Transparency<a class="headerlink" href="#5-transparency" title="Permanent link">&para;</a></h3>
+<p>Be open about AI use and decision-making processes.</p>
+<p><strong>Questions to ask:</strong>
+- Do stakeholders know when AI is used?
+- Can we explain AI decisions?
+- Are our criteria and methods clear?</p>
+<hr />
+<h2 id="43-understanding-algorithmic-bias">4.3 Understanding Algorithmic Bias<a class="headerlink" href="#43-understanding-algorithmic-bias" title="Permanent link">&para;</a></h2>
+<p><strong>Bias:</strong> Systematic errors that create unfair outcomes for certain groups.</p>
+<h3 id="types-of-bias">Types of Bias<a class="headerlink" href="#types-of-bias" title="Permanent link">&para;</a></h3>
+<p><strong>1. Historical Bias</strong>
+- Training data reflects past discrimination
+- Example: AI trained on historical hiring data perpetuates gender bias</p>
+<p><strong>2. Representation Bias</strong>
+- Some groups over/underrepresented in data
+- Example: Facial recognition trained mostly on white faces fails on darker skin tones</p>
+<p><strong>3. Measurement Bias</strong>
+- How we measure success introduces bias
+- Example: Defining "successful" donor based on giving amount ignores community impact</p>
+<p><strong>4. Aggregation Bias</strong>
+- One model applied to diverse groups
+- Example: Health AI trained on general population performs poorly for specific ethnic groups</p>
+<p><strong>5. Evaluation Bias</strong>
+- Testing doesn't include all affected groups
+- Example: Chatbot tested only in English misses issues with other languages</p>
+<p><strong>6. Deployment Bias</strong>
+- System used differently than intended
+- Example: Donor scoring tool used to exclude low-income communities</p>
+<hr />
+<h2 id="44-real-world-examples-of-ai-bias">4.4 Real-World Examples of AI Bias<a class="headerlink" href="#44-real-world-examples-of-ai-bias" title="Permanent link">&para;</a></h2>
+<h3 id="case-1-recidivism-prediction">Case 1: Recidivism Prediction<a class="headerlink" href="#case-1-recidivism-prediction" title="Permanent link">&para;</a></h3>
+<p><strong>System:</strong> COMPAS predicted likelihood of re-offending<br />
+<strong>Bias:</strong> Higher false positive rates for Black defendants<br />
+<strong>Impact:</strong> Unjust sentencing decisions<br />
+<strong>Lesson:</strong> Historical bias in criminal justice data perpetuated discrimination</p>
+<h3 id="case-2-facial-recognition">Case 2: Facial Recognition<a class="headerlink" href="#case-2-facial-recognition" title="Permanent link">&para;</a></h3>
+<p><strong>System:</strong> Commercial facial recognition software<br />
+<strong>Bias:</strong> 34% error rate for dark-skinned women vs. 0.8% for light-skinned men<br />
+<strong>Impact:</strong> Misidentification, false accusations<br />
+<strong>Lesson:</strong> Representation bias in training data</p>
+<h3 id="case-3-job-screening-ai">Case 3: Job Screening AI<a class="headerlink" href="#case-3-job-screening-ai" title="Permanent link">&para;</a></h3>
+<p><strong>System:</strong> Amazon's resume screening tool<br />
+<strong>Bias:</strong> Penalized resumes with "women's" (e.g., "women's chess club")<br />
+<strong>Impact:</strong> Discriminated against female candidates<br />
+<strong>Lesson:</strong> Historical bias from male-dominated tech hiring</p>
+<h3 id="how-this-applies-to-non-profits">How This Applies to Non-Profits<a class="headerlink" href="#how-this-applies-to-non-profits" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Non-Profit Scenarios</p>
+<ul>
+<li>Grant recommendation AI favors organizations in wealthy zip codes</li>
+<li>Volunteer matching system steers women toward "nurturing" roles</li>
+<li>Donor prediction model undervalues community members without formal jobs</li>
+<li>Service eligibility AI discriminates against immigrants without traditional documentation</li>
+</ul>
+</div>
+<hr />
+<h2 id="45-detecting-bias-in-your-ai-systems">4.5 Detecting Bias in Your AI Systems<a class="headerlink" href="#45-detecting-bias-in-your-ai-systems" title="Permanent link">&para;</a></h2>
+<h3 id="quantitative-methods">Quantitative Methods<a class="headerlink" href="#quantitative-methods" title="Permanent link">&para;</a></h3>
+<p><strong>Disparate Impact Analysis</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Acceptance Rate for Group A / Acceptance Rate for Group B
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>If ratio &lt; 0.80, potential disparate impact exists
+</code></pre></div></p>
+<p><strong>Confusion Matrix by Group</strong>
+- Compare false positive/negative rates across demographics
+- Look for systematic differences</p>
+<p><strong>Fairness Metrics</strong>
+- Demographic parity
+- Equal opportunity
+- Predictive parity
+- Individual fairness</p>
+<h3 id="qualitative-methods">Qualitative Methods<a class="headerlink" href="#qualitative-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Community feedback:</strong> Ask affected groups</li>
+<li><strong>Scenario testing:</strong> Try edge cases and diverse examples</li>
+<li><strong>Expert review:</strong> Have domain experts examine outputs</li>
+<li><strong>Stakeholder audits:</strong> Regular review with community members</li>
+</ul>
+<hr />
+<h2 id="46-mitigating-bias">4.6 Mitigating Bias<a class="headerlink" href="#46-mitigating-bias" title="Permanent link">&para;</a></h2>
+<h3 id="pre-processing-fix-the-data">Pre-Processing (Fix the Data)<a class="headerlink" href="#pre-processing-fix-the-data" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Collect diverse data</strong> - Ensure all groups represented</li>
+<li><strong>Balance datasets</strong> - Oversample underrepresented groups</li>
+<li><strong>Remove proxies</strong> - Eliminate correlated features (zip code → race)</li>
+<li><strong>Audit for bias</strong> - Statistical testing before training</li>
+</ol>
+<h3 id="in-processing-fix-the-algorithm">In-Processing (Fix the Algorithm)<a class="headerlink" href="#in-processing-fix-the-algorithm" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Fairness constraints</strong> - Build fairness into model training</li>
+<li><strong>Adversarial debiasing</strong> - Train model to ignore sensitive attributes</li>
+<li><strong>Regularization</strong> - Penalize biased predictions</li>
+</ol>
+<h3 id="post-processing-fix-the-outputs">Post-Processing (Fix the Outputs)<a class="headerlink" href="#post-processing-fix-the-outputs" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Threshold adjustment</strong> - Set different decision thresholds by group</li>
+<li><strong>Calibration</strong> - Ensure predictions equally accurate across groups</li>
+<li><strong>Human override</strong> - Allow human review of edge cases</li>
+</ol>
+<h3 id="organizational-measures">Organizational Measures<a class="headerlink" href="#organizational-measures" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Diverse teams</strong> - Include affected communities in development</li>
+<li><strong>Regular audits</strong> - Ongoing bias testing</li>
+<li><strong>Transparent documentation</strong> - Clear about methods and limitations</li>
+<li><strong>Accountability</strong> - Clear responsibility for AI decisions</li>
+</ol>
+<hr />
+<h2 id="47-the-digital-divide">4.7 The Digital Divide<a class="headerlink" href="#47-the-digital-divide" title="Permanent link">&para;</a></h2>
+<p>Technology access is unequal. AI can worsen this divide.</p>
+<h3 id="dimensions-of-digital-divide">Dimensions of Digital Divide<a class="headerlink" href="#dimensions-of-digital-divide" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Access:</strong> Not everyone has internet, devices</li>
+<li><strong>Skills:</strong> Digital literacy varies widely</li>
+<li><strong>Language:</strong> Most AI optimized for English</li>
+<li><strong>Disability:</strong> Many AI tools lack accessibility features</li>
+</ul>
+<h3 id="ensuring-equity">Ensuring Equity<a class="headerlink" href="#ensuring-equity" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Provide multiple access paths</strong> - Phone, web, in-person<br />
+✅ <strong>Offer human alternatives</strong> - Never force AI-only interactions<br />
+✅ <strong>Support multiple languages</strong> - Especially for your communities<br />
+✅ <strong>Design for accessibility</strong> - Screen readers, captions, simple language<br />
+✅ <strong>Provide training</strong> - Help people use new tools<br />
+✅ <strong>Consider low-bandwidth</strong> - Not everyone has high-speed internet  </p>
+<hr />
+<h2 id="48-informed-consent">4.8 Informed Consent<a class="headerlink" href="#48-informed-consent" title="Permanent link">&para;</a></h2>
+<p>People should understand and agree to AI use.</p>
+<h3 id="what-to-communicate">What to Communicate<a class="headerlink" href="#what-to-communicate" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>That AI is being used</strong> - "We use AI to..."</li>
+<li><strong>How it works</strong> - Simple explanation</li>
+<li><strong>What data is collected</strong> - Be specific</li>
+<li><strong>How decisions are made</strong> - Key factors</li>
+<li><strong>Rights and options</strong> - Opt-out, appeal, human review</li>
+<li><strong>Contact information</strong> - Who to ask for help</li>
+</ol>
+<h3 id="example-consent-language">Example Consent Language<a class="headerlink" href="#example-consent-language" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>We use artificial intelligence to help match volunteers 
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>with opportunities. The system considers your stated interests, 
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>availability, and skills. You can opt out at any time and 
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>request human matching instead. Your information is never 
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>shared with third parties. Questions? Contact volunteers@org.org
+</code></pre></div>
+<hr />
+<h2 id="49-building-an-ethics-framework">4.9 Building an Ethics Framework<a class="headerlink" href="#49-building-an-ethics-framework" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-define-your-values">Step 1: Define Your Values<a class="headerlink" href="#step-1-define-your-values" title="Permanent link">&para;</a></h3>
+<p>What matters most to your organization?
+- Community trust
+- Equity and inclusion
+- Transparency
+- Beneficiary wellbeing
+- Data privacy</p>
+<h3 id="step-2-establish-principles">Step 2: Establish Principles<a class="headerlink" href="#step-2-establish-principles" title="Permanent link">&para;</a></h3>
+<p>Translate values into actionable principles:
+- "We will never use AI for decisions affecting eligibility without human review"
+- "We will test all AI systems for bias against protected groups"
+- "We will provide clear opt-out options for all AI systems"</p>
+<h3 id="step-3-create-decision-criteria">Step 3: Create Decision Criteria<a class="headerlink" href="#step-3-create-decision-criteria" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Must Answer YES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does this AI advance our mission?</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Have we tested for bias?</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Can we explain decisions to stakeholders?</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Do affected people consent?</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Is there meaningful human oversight?</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-4-assign-responsibility">Step 4: Assign Responsibility<a class="headerlink" href="#step-4-assign-responsibility" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Who reviews AI systems for ethics?</li>
+<li>Who investigates bias complaints?</li>
+<li>Who approves new AI implementations?</li>
+<li>Who communicates with affected communities?</li>
+</ul>
+<h3 id="step-5-regular-review">Step 5: Regular Review<a class="headerlink" href="#step-5-regular-review" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Quarterly ethics audits</li>
+<li>Annual community feedback sessions</li>
+<li>Ongoing bias testing</li>
+<li>Policy updates as needed</li>
+</ul>
+<hr />
+<h2 id="410-practical-guidelines">4.10 Practical Guidelines<a class="headerlink" href="#410-practical-guidelines" title="Permanent link">&para;</a></h2>
+<h3 id="do">DO:<a class="headerlink" href="#do" title="Permanent link">&para;</a></h3>
+<p>✅ Start with low-stakes applications<br />
+✅ Be transparent about AI use<br />
+✅ Test extensively before deploying<br />
+✅ Provide human alternatives<br />
+✅ Monitor for unintended consequences<br />
+✅ Involve affected communities in decisions<br />
+✅ Document everything<br />
+✅ Update systems regularly  </p>
+<h3 id="dont">DON'T:<a class="headerlink" href="#dont" title="Permanent link">&para;</a></h3>
+<p>❌ Use AI for high-stakes decisions without human review<br />
+❌ Assume AI is neutral or objective<br />
+❌ Deploy without bias testing<br />
+❌ Hide AI use from stakeholders<br />
+❌ Ignore complaints about bias<br />
+❌ Use AI because everyone else is<br />
+❌ Forget about people without technology access<br />
+❌ Prioritize efficiency over equity  </p>
+<hr />
+<h2 id="chapter-summary">Chapter Summary<a class="headerlink" href="#chapter-summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ethics are foundational, not optional, for non-profit AI</li>
+<li>Multiple types of bias can creep into AI systems</li>
+<li>Bias comes from data, algorithms, and deployment</li>
+<li>Detect bias through quantitative and qualitative methods</li>
+<li>Mitigation requires technical and organizational approaches</li>
+<li>Address the digital divide proactively</li>
+<li>Obtain informed consent from affected individuals</li>
+<li>Build comprehensive ethics frameworks</li>
+<li>Prioritize trust over convenience</li>
+</ul>
+<hr />
+<h2 id="practical-exercise">Practical Exercise<a class="headerlink" href="#practical-exercise" title="Permanent link">&para;</a></h2>
+<p><strong>Scenario:</strong> Your organization wants to use AI to prioritize which program applicants to interview first.</p>
+<p><strong>Questions:</strong>
+1. What ethical concerns does this raise?
+2. What types of bias might occur?
+3. How would you test for bias?
+4. What safeguards would you implement?
+5. How would you explain this to applicants?</p>
+<hr />
+<p><a href="../05-data-privacy/">Next: Chapter 5 - Data Privacy →</a></p>
+<p><a href="../03-generative-ai/">← Previous: Chapter 3</a> | <a href="index.md">Chapter Index</a></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03-generative-ai/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 3 - Generative AI">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 3 - Generative AI
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-data-privacy/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 5 - Data Privacy">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 5 - Data Privacy
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Asian Media Access | All rights reserved
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/yourusername" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://ww1.amamedia.org/" target="_blank" rel="noopener" title="Asian Media Access" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../assets/javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

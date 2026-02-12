@@ -2,54 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/about/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/concept-taxonomy/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/contact/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/course-description/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/faq/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/glossary/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/learning-graph/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/license/</loc>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/microsims/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/reference-concepts/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/reference-dependencies/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/resources/</loc>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/%7Bglossary%2Cfaq%2Cresources%2Clicense%2Ccontact%7D/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
     </url>
     <url>
          <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/00-chapter/</loc>
-         <lastmod>2026-02-11</lastmod>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/01-introduction/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/02-ai-fundamentals/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/03-generative-ai/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/04-ethics-bias/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/05-data-privacy/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/06-fundraising/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/07-program-delivery/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/08-operations/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/09-content-creation/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/10-volunteer-management/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/11-tool-selection/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/12-measuring-impact/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/13-ai-strategy/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/14-change-management/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/15-governance-future/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://yourdomain.github.io/ai-nonprofit-textbook/chapters/summary_chapters_5-15/</loc>
+         <lastmod>2026-02-12</lastmod>
     </url>
 </urlset>
